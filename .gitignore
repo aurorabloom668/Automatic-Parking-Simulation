@@ -1,0 +1,47 @@
+# ROS 2 / colcon generated output
+/build/
+/install/
+/log/
+/devel/
+
+# Python caches, test output, and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.venv/
+venv/
+
+# Local editor and assistant settings / credentials
+/.vscode/
+/.idea/
+/.codeartsdoer/
+/.codex/
+/.agents/
+/.aws/
+.env
+.env.*
+
+# ROS recordings
+rosbag2_*/
+*.bag
+*.db3
+*.db3-shm
+*.db3-wal
+*.mcap
+
+# Editor temporary files and OS metadata
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+correct.md
+record.md
+tutorial.md
+
+# Do not ignore *.obj: these are required Wavefront vehicle meshes.
+# Keep meshes, textures, worlds, RViz configs, and YAML source files tracked.

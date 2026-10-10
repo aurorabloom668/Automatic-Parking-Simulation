@@ -1,0 +1,5 @@
+<library path="parking_panel">
+  <class name="auto_parking/ParkingPanel" type="auto_parking::ParkingPanel" base_class_type="rviz_common::Panel">
+    <description>手动驾驶与近场自动泊车控制面板</description>
+  </class>
+</library>

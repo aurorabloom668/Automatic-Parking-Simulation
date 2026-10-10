@@ -1,0 +1,41 @@
+parking_supervisor:
+  ros__parameters:
+    frame_id: odom
+    control_rate: 50.0
+    heading_gain: 1.4
+    lateral_gain: 1.0
+    steering_preview_time: 0.10
+    throttle_kp: 0.35
+    brake_kp: 0.5
+    activation_radius: 12.0  # 后轴到车位矩形的最短距离，规划仍限于当前位姿与车位附近
+    entry_speed: 0.15
+    position_tolerance: 0.10
+    yaw_tolerance: 0.05235987756
+    stop_speed: 0.05
+    minimum_clearance: 0.10
+    max_adjustments: 5  # 真实终点纠偏和障碍变化后停车重规划共用次数
+    xy_resolution: 0.30
+    yaw_resolution: 0.10471975512
+    search_step: 0.60
+    search_clearance: 0.12
+    local_margin: 5.0
+    search_max_time: 15.0
+    search_max_expand: 40000
+    cloud_topic: /prius/center_laser/scan
+    detect_rate: 2.0
+    speed_forward: 0.7
+    speed_reverse: 0.45
+    speed_fine: 0.20
+    click_topic: /clicked_point
+
+proximity_warn:
+  ros__parameters:
+    warn_distance: 0.5
+    danger_distance: 0.10
+    publish_rate: 5.0
+
+gt_odom:
+  ros__parameters:
+    odom_frame: odom
+    base_frame: dummy
+    ground_truth_topic: /prius/ground_truth

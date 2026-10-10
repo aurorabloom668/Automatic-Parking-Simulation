@@ -1,0 +1,348 @@
+Panels:
+  - Class: auto_parking/ParkingPanel
+    Name: ParkingPanel
+  - Class: rviz_common/Displays
+    Help Height: 0
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /PlanningMarkers1
+        - /Lidar3D1
+      Splitter Ratio: 0.55
+    Tree Height: 720
+  - Class: rviz_common/Views
+    Expanded: ~
+    Name: Views
+    Splitter Ratio: 0.5
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.2
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.03
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 60
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Alpha: 1
+      Class: rviz_default_plugins/RobotModel
+      Collision Enabled: false
+      Description File: ""
+      Description Source: Topic
+      Description Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /prius/robot_description
+      Enabled: true
+      Name: RobotModel
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: PlanningMarkers
+      Namespaces:
+        planned_path: true
+        parking_spot: true
+        goal_footprint: true
+        gear_shift: true
+        spot_label: true
+        parking_area: true
+      Topic:
+        Depth: 20
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /parking/preview_markers
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 0; 255; 255
+      Color Transformer: AxisColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: Lidar3D
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.08
+      Style: Points
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /prius/center_laser/scan
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Class: rviz_common/Group
+      Displays:
+        - Alpha: 0.35
+          Buffer Length: 1
+          Class: rviz_default_plugins/Range
+          Color: 40; 170; 255
+          Enabled: true
+          Name: FrontLeftFar
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Best Effort
+            Value: /prius/front_sonar/left_far_range
+          Value: true
+        - Alpha: 0.35
+          Buffer Length: 1
+          Class: rviz_default_plugins/Range
+          Color: 40; 170; 255
+          Enabled: true
+          Name: FrontLeftMiddle
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Best Effort
+            Value: /prius/front_sonar/left_middle_range
+          Value: true
+        - Alpha: 0.35
+          Buffer Length: 1
+          Class: rviz_default_plugins/Range
+          Color: 40; 170; 255
+          Enabled: true
+          Name: FrontRightMiddle
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Best Effort
+            Value: /prius/front_sonar/right_middle_range
+          Value: true
+        - Alpha: 0.35
+          Buffer Length: 1
+          Class: rviz_default_plugins/Range
+          Color: 40; 170; 255
+          Enabled: true
+          Name: FrontRightFar
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Best Effort
+            Value: /prius/front_sonar/right_far_range
+          Value: true
+        - Alpha: 0.35
+          Buffer Length: 1
+          Class: rviz_default_plugins/Range
+          Color: 40; 170; 255
+          Enabled: true
+          Name: BackLeftFar
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Best Effort
+            Value: /prius/back_sonar/left_far_range
+          Value: true
+        - Alpha: 0.35
+          Buffer Length: 1
+          Class: rviz_default_plugins/Range
+          Color: 40; 170; 255
+          Enabled: true
+          Name: BackLeftMiddle
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Best Effort
+            Value: /prius/back_sonar/left_middle_range
+          Value: true
+        - Alpha: 0.35
+          Buffer Length: 1
+          Class: rviz_default_plugins/Range
+          Color: 40; 170; 255
+          Enabled: true
+          Name: BackRightMiddle
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Best Effort
+            Value: /prius/back_sonar/right_middle_range
+          Value: true
+        - Alpha: 0.35
+          Buffer Length: 1
+          Class: rviz_default_plugins/Range
+          Color: 40; 170; 255
+          Enabled: true
+          Name: BackRightFar
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Best Effort
+            Value: /prius/back_sonar/right_far_range
+          Value: true
+        - Alpha: 0.35
+          Buffer Length: 1
+          Class: rviz_default_plugins/Range
+          Color: 40; 170; 255
+          Enabled: true
+          Name: LeftFront
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Best Effort
+            Value: /prius/side_sonar/left_front_range
+          Value: true
+        - Alpha: 0.35
+          Buffer Length: 1
+          Class: rviz_default_plugins/Range
+          Color: 40; 170; 255
+          Enabled: true
+          Name: LeftRear
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Best Effort
+            Value: /prius/side_sonar/left_rear_range
+          Value: true
+        - Alpha: 0.35
+          Buffer Length: 1
+          Class: rviz_default_plugins/Range
+          Color: 40; 170; 255
+          Enabled: true
+          Name: RightFront
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Best Effort
+            Value: /prius/side_sonar/right_front_range
+          Value: true
+        - Alpha: 0.35
+          Buffer Length: 1
+          Class: rviz_default_plugins/Range
+          Color: 40; 170; 255
+          Enabled: true
+          Name: RightRear
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Best Effort
+            Value: /prius/side_sonar/right_rear_range
+          Value: true
+      Enabled: true
+      Name: Ultrasonics
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: Proximity
+      Namespaces:
+        proximity: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /parking/proximity_markers
+      Value: true
+    - Class: rviz_default_plugins/Image
+      Enabled: true
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: BackImage
+      Normalize Range: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /prius/back_camera/image_raw
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: odom
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+      Line color: 128; 128; 0
+    - Class: rviz_default_plugins/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 45
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.06
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: -13
+        Y: 5.5
+        Z: 0
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.01
+      Pitch: 1.2
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+      Yaw: 1.5708
+    Saved: ~
+Window Geometry:
+  ParkingPanel:
+    collapsed: false
+  BackImage:
+    collapsed: false
+  Displays:
+    collapsed: false
+  Height: 1000
+  Hide Left Dock: false
+  Hide Right Dock: false
+  Views:
+    collapsed: false
+  Width: 1800
+  X: 60
+  Y: 40
